@@ -1,3 +1,9 @@
-<h3>
-  {{'Server'}} with ID   {{serverId}}  is {{serverStatus}}
-</h3>
+ 
+<input type="text" [(ngModel)] = "username" >
+ <button type="submit" [disabled]="username===''" class="btn btn-submit" (click)="username=''">
+     Submit
+ </button>
+<p>
+  {{username}}
+</p>
+

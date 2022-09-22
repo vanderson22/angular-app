@@ -1,1 +1,24 @@
-<h1> servers </h1>
+<!-- <button class="btn btn-primary"
+  [disabled]="!allowNewServer"
+  (click)="onCreateServer()" >
+   Add server
+</button> >-->
+
+<input type="text"  [(ngModel)] = "serverName" >
+<p></p>
+<button class="btn btn-primary"
+  [disabled]="!allowNewServer"
+  (click)="onCreateServer()" >
+   Add server
+</button>
+<p></p>
+<p>{{serverName}}</p>
+
+<!-- [] propertie bind-->
+<p *ngIf="!allowNewServer" >
+    {{'Server'}} with ID   {{serverId}}  is {{getServerStatus()}}
+    <br />
+    enable/disable {{allowNewServer}}  <br />
+   
+</p>
+<p >{{serverCreationStatus}} </p>

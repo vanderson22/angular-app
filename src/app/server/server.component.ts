@@ -1,4 +1,5 @@
 import { Component } from "@angular/core";
+import { isEmpty } from "rxjs";
 
 //descorator para informar que é um component
 @Component({
@@ -9,9 +10,16 @@ import { Component } from "@angular/core";
   
 export class ServerComponent{
     serverId = 10;
-    serverStatus = 'offline'
+    serverStatus = 'offline';
+
+    username = "";
+
 
     getServerStatus(){
       return this.serverStatus;
+    }
+
+    onClickReset(){
+      this.username = "";
     }
 }
