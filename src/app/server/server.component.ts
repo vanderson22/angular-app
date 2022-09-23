@@ -22,7 +22,7 @@ export class ServerComponent{
     }
 
     onclickButton(){
-       this.clicks.push((this.clicks.length - 1) +1) ; // (this.clicks.length - 1) +1;
+       this.clicks.push(new Date()) ; // (this.clicks.length - 1) +1;
        
       if(this.btnparagraph){
             this.btnparagraph = false;
