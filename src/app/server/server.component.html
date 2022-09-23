@@ -1,9 +1,15 @@
  
-<input type="text" [(ngModel)] = "username" >
- <button type="submit" [disabled]="username===''" class="btn btn-submit" (click)="username=''">
-     Submit
- </button>
-<p>
-  {{username}}
+ <button type="submit"  class="btn btn-submit" (click)="onclickButton()">
+    Display Details
+</button>
+
+<p *ngIf="btnparagraph"> 
+  Secret Passord = Tuna :
+  <p *ngFor="let click of clicks" [ngStyle]="{backgroundColor : click >= 0 && getColor(click)}"
+ [ngClass]="{whiteLabel: click >= 5}">
+  
+  {{click}}
+
 </p>
 
+ 
